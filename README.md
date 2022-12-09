@@ -45,7 +45,7 @@ This script calculates correlations between differentially expresssed miRNAs in 
 ## _Heatmap.R_
 This script was used to perform a hierarchical clustering (distance: Manhatan, method: complete), by depicting a heatmap. Used data were normalized by Z-score expression values of the 40 differentially expressed miRNAs in each group of patients. 
 
-## _Data_preparation_to_Gephi.R
+## _Data_preparation_to_Gephi.R_
 This script prepares the miEAA output file following the format required by Gephi to obtain links between diferentially expressed miRNAs with known targets and its associated biological functions. 
 
 ![image](https://user-images.githubusercontent.com/67425702/206741023-e6f04b70-05d2-4b68-bdd8-c0699455836c.png)
