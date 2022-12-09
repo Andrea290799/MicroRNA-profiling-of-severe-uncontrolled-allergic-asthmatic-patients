@@ -21,5 +21,20 @@ This script is used to perform RT-qPCR expression values normalization and devel
 ![image](https://user-images.githubusercontent.com/67425702/206720501-ad3db4ab-830d-465e-9810-81d28cc9c039.png)
 
 - DOS_ΔΔct: Function that calculates 2^-ΔΔCt.
+- main: Function that executes the main code. 
 
-** You have to take into account the neccessary changes in paths, file names and variables for the script to properly work
+
+
+## _miRNAs_diff_exp.R_
+
+This script is used to perform differential expression analysis between groups of patients (control, mild and severe uncontrolled):
+- data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
+- statistical_tests_pvalues: Function that does different statistical tests. 
+- main: Function that executes the main code. It also calculates the Fold Changes of each miRNA in each subjects comparative. 
+
+
+
+
+~~~~
+You have to take into account the neccessary changes in paths, file names and variables for the script to properly work
+~~~~
