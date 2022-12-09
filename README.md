@@ -40,10 +40,10 @@ This script prepares a 6x3 boxplot figure of the expression values of all those 
 
 ## _Correlations.R_
 
-This script calculates correlations between differentially expresssed miRNAs in mild and severe uncontrolled patient and inflamatory related metabolites. First, normality of both populations is assessed. Pearson correlation test is used when normality is met; otherwise, Spearman correlation test is applied. With r parameter and p-value, a correlation plot is obtained. 
+This script calculates correlations between differentially expresssed miRNAs in mild and severe uncontrolled patients and inflamatory related metabolites. First, normality of both populations is assessed. Pearson correlation test is used when normality is met; otherwise, Spearman correlation test is applied. With r parameter and p-value, a correlation plot is obtained. 
 
 ## _Heatmap.R_
-This script was used to perform a hierarchical clustering (distance: Manhatan, method: complete), by depicting a heatmap. Used data were normalized by Z-score expression values of the 40 differentially expressed miRNAs in each group of patients. 
+This script was used to perform a hierarchical clustering (distance: Manhatan, method: complete), by depicting a heatmap. Used data were expression values of the 40 differentially expressed miRNAs in each group of patients (normalized by Z-score). 
 
 ## _Data_preparation_to_Gephi.R_
 This script prepares the miEAA output file following the format required by Gephi to obtain links between diferentially expressed miRNAs with known targets and its associated biological functions. 
