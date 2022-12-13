@@ -16,11 +16,6 @@ data_collection <- function(file_name){
   
   data <- read.delim(file = file_name, skip = 1)
   
-  cts <- output_list[["cts"]]
-  miRNAs <- output_list[["miRNAs"]]
-  groups <- output_list[["groups"]]
-  patients <- output_list[["patients"]]
-  
   cts <- c(data[,3])
   miRNAs <- c(data[,2])
   groups <- c(data[,5])
@@ -45,16 +40,8 @@ data_collection <- function(file_name){
                         "hsa-miR-627-5p", "hsa-miR-30d-5p", 
                         "hsa-miR-185-5p", "hsa-miR-326")
   
-  
+  # only "important_miRNAs" are used
   to_keep <- c()
-
-  # outliers are deleted for representation
-  to_remove <- which(cts > 40)
-
-  miRNAs <- miRNAs[-to_remove]
-  cts <- cts[-to_remove]
-  groups <- groups[-to_remove]
-  patients <- patients[-to_remove]
 
   for (i in important_miRNAs){
     to_keep <- c(to_keep, which(miRNAs == i))
@@ -93,7 +80,7 @@ for (i in unique(data$miRNAs)){
   miRNAs <- data$miRNAs[data$miRNAs == i]
   Grupos <- data$groups[data$miRNAs == i]
   
-  # nomenclature changes
+  # group nomenclature changes
   for (j in 1:length(Grupos)){
     
     if (Grupos[j] == "ICS"){
