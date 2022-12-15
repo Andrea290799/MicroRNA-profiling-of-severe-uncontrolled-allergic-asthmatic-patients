@@ -9,7 +9,7 @@ The tow main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been 
 - Used plates must have 3 UniSP3 IPC detectors, used for normalization. 
 - Three groups of subjects have been considered. 
 
-* You need to take into account the neccessary changes in paths, file names and variables for the script to properly work. If you needed, you can contact me: andrea.escolar99@gmail.com
+You need to take into account the neccessary changes in paths, file names and variables for the script to properly work. If you needed, you can contact me: andrea.escolar99@gmail.com
 
 ## _miRNAs_normalization.R_
 
