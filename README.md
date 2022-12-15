@@ -40,7 +40,7 @@ Well	PlateID	Sample	Detector	Task	Ct	delta Rn	delta Ct	Ct Avg	Ct SD	Avg Delta Ct
 main("your_folder", "1", "GME")
 ~~~
 
-The fisrt argument is the folder ypu want to analyze, the second argument is the number of the panel of the data (remember that used panels are Human I or II) and the third is the normalization method to use. Currently, there is only one metho available (GME). 
+The fisrt argument is the folder you want to analyze, the second argument is the number of the panel of the data (remember that used panels are Human I or II) and the third is the normalization method to use. Currently, there is only one method available (GME). 
 
 
 ### Results
