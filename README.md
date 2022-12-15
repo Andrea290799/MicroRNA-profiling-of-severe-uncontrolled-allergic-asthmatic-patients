@@ -59,7 +59,7 @@ G1-1	hsa-miR-136-5p	0.0761552103131045	1.8813963	ICS
 The columns represent the ID of the panel (the sample name), the name of the miRNA, the normalized expression value, ΔRn value and the group of the sample. 
 
 
-### How it works?
+### How does it work?
 
 This script is used to perform RT-qPCR expression values normalization and developes the next functions:
 - data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
@@ -85,12 +85,33 @@ This script is used to perform RT-qPCR expression values normalization and devel
 
 ## _miRNAs_diff_exp.R_
 
+### Data preparation and code execution
+Once you obtain the results from the former step, you don't need to do anything; the only input for this script is the file obtained in the last step. Just execute the code. To execute the script, you only need to execute the functions in the given code and, after that, execute this line:
+
+~~~
+main("your_file", "method")
+~~~
+
+The fisrt argument is the file you want to analyze, the second argument is the method that will be used in the statistical analysis. Currently, there is only one method available (classic).
+
+### Results
+
+The executed script will generate a new file called ANOVA_KW_differences_GME.txt. This results file look like this: 
+
+~~~
+miRNA	ICS_vs_C_pvalue	ICS_vs_C_log2(FC)	UC_vs_C_pvalue	UC_vs_C_log2(FC)	UC_vs_ICS_pvalue	UC_vs_ICS_log2(FC)
+hsa-miR-136-5p	0.103725995366862	-1.53734987240946	0.00128973193988674	-2.56882669038593	0.247450691723138	-1.03147681797647
+hsa-miR-199b-5p	0.525398682620381	-0.224747183619913	0.0340693362365189	0.557023117465754	0.0290783519885687	0.781770301085667
+hsa-miR-103a-3p	0.208043941520856	-0.256235151750041	0.0320436058758848	-0.74388768327026	0.0320436058758848	-0.487652531520218
+hsa-miR-185-5p	0.123194815683711	0.421168224956311	0.283929423652132	-0.671979145431133	0.000323206205559147	-1.09314737038744
+hsa-miR-24-3p	0.103262954572265	0.778895173664599	0.00295485524248086	1.26398007242502	0.103262954572265	0.485084898760418
+~~~
+
+The columns represent the miRNA name and the pvalue and log2(Fold Change) of every two groups compared. 
+
+### How does it work?
+
 This script is used to perform differential expression analysis between groups of subjects (control, mild and severe uncontrolled):
 - data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
 - statistical_tests_pvalues: Function that does different statistical tests. 
 - main: Function that executes the main code. It also calculates the Fold Changes of each miRNA in each subjects' comparative. 
-
-
-~~~
-You have to take into account the neccessary changes in paths, file names and variables for the script to properly work
-~~~
