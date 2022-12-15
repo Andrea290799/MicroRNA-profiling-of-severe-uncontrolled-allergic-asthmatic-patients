@@ -14,7 +14,7 @@ This script is used to perform RT-qPCR expression values normalization and devel
 - interplate_normalization: Function that do interplate normalization on the data.
 - GME: Function that applies GME normalization method.
 
-![image](https://user-images.githubusercontent.com/67425702/206719972-6ff2d126-66bf-462b-afc9-a5065cca33df.png)
+![image](https://user-images.githubusercontent.com/67425702/207880665-9d023688-42c8-42ee-b2dc-510371bf14a5.png)
 
 - ΔΔCt: Function that does ΔΔCt normalization.
 
