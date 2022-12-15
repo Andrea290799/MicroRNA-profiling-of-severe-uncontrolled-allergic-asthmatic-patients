@@ -11,7 +11,30 @@ The tow main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been 
 
 * You need to take into account the neccessary changes in paths, file names and variables for the script to properly work. If you needed, you can contact me: andrea.escolar99@gmail.com
 
-# Data preparation and code execution
+## _miRNAs_normalization.R_
+
+This script is used to perform RT-qPCR expression values normalization and developes the next functions:
+- data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
+- undetermined_IPC_delete: Function that deletes the data of those plates that have 2 or 3 of its IPCs as undetermined.
+- cts_transformation_40_NA: Function that transforms some Ct values following criteria in image below.
+
+![image](https://user-images.githubusercontent.com/67425702/206719120-02a46280-d95b-46b2-9951-87467cc38e1a.png)
+
+- blank_NA_delete: Function that deletes those miRNAs whose cts are NA or whose miRNA names are Blank.
+- interplate_normalization: Function that do interplate normalization on the data.
+- GME: Function that applies GME normalization method.
+
+![image](https://user-images.githubusercontent.com/67425702/207880665-9d023688-42c8-42ee-b2dc-510371bf14a5.png)
+
+- ΔΔCt: Function that does ΔΔCt normalization.
+
+![image](https://user-images.githubusercontent.com/67425702/207880923-f0ac69ae-df6d-4597-a6c0-4ddf3dc545df.png)
+
+
+- DOS_ΔΔct: Function that calculates 2^-ΔΔCt.
+- main: Function that executes the main code. 
+
+### Data preparation and code execution
 
 1. After performing RT-qPCR and once the data is ready, export the amplification data in txt foramt with RQ-Manager. The first lines of the file look like this:
 
@@ -41,7 +64,7 @@ main("your_folder", "1", "GME")
 The fisrt argument is the folder ypu want to analyze, the second argument is the number of the panel of the data (remember that used panels are Human I or II) and the third is the normalization method to use. Currently, there is only one metho available (GME). 
 
 
-# Results
+### Results
 
 The executed script will generate a new folder called as the name of the used method (GME). Inside, there are folders (belonging to each used panel) with process control files (1-6). There is also a common to all panels control files (7) and the results file (8). This results file look like this: 
 
@@ -56,29 +79,6 @@ G1-1	hsa-miR-136-5p	0.0761552103131045	1.8813963	ICS
 
 The columns represent the ID of the panel (the sample name), the name of the miRNA, the normalized expression value, ΔRn value and the group of the sample. 
 
-
-## _miRNAs_normalization.R_
-
-This script is used to perform RT-qPCR expression values normalization and developes the next functions:
-- data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
-- undetermined_IPC_delete: Function that deletes the data of those plates that have 2 or 3 of its IPCs as undetermined.
-- cts_transformation_40_NA: Function that transforms some Ct values following criteria in image below.
-
-![image](https://user-images.githubusercontent.com/67425702/206719120-02a46280-d95b-46b2-9951-87467cc38e1a.png)
-
-- blank_NA_delete: Function that deletes those miRNAs whose cts are NA or whose miRNA names are Blank.
-- interplate_normalization: Function that do interplate normalization on the data.
-- GME: Function that applies GME normalization method.
-
-![image](https://user-images.githubusercontent.com/67425702/207880665-9d023688-42c8-42ee-b2dc-510371bf14a5.png)
-
-- ΔΔCt: Function that does ΔΔCt normalization.
-
-![image](https://user-images.githubusercontent.com/67425702/207880923-f0ac69ae-df6d-4597-a6c0-4ddf3dc545df.png)
-
-
-- DOS_ΔΔct: Function that calculates 2^-ΔΔCt.
-- main: Function that executes the main code. 
 
 
 
