@@ -8,7 +8,7 @@ This script was used to perform a hierarchical clustering (distance: Manhatan, m
 
 This script prepares a 6x3 boxplot figure of the expression values of all those miRNAs that have known targets, comparing mild and severe uncontrolled groups. 
 
-![image](https://user-images.githubusercontent.com/67425702/207881345-b9545a7e-add6-4a31-b957-288016dbb657.png)
+![image](https://user-images.githubusercontent.com/67425702/207881935-ba544940-3dcd-40ba-81dc-4d840167ab17.png)
 
 
 ## _Data_preparation_to_Gephi.R_
