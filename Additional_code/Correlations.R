@@ -7,9 +7,9 @@ library(ggpubr)
 library(ggcorrplot)
 
 # paths of used files
-path_miRNAs <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Resultados_miRNAs\\8_RESULTS_GME.txt"
-path_metabolites <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Metabolitos.xlsx"
-path_significative <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Resultados_miRNAs\\miRNAs_validation.xlsx"
+path_miRNAs <- ".\\Resultados_miRNAs\\8_RESULTS_GME.txt"
+path_metabolites <- ".\\Metabolitos.xlsx"
+path_significative <- ".\\Resultados_miRNAs\\miRNAs_validation.xlsx"
 
 # data obtention: differentially expressed miRNAs and metabolites
 miRNA_data <- read.table(path_miRNAs, header = TRUE)
@@ -87,7 +87,7 @@ for (miRNA in rownames(miRNA_data)){
                 cor.coef = TRUE, cor.method = method,
                 xlab = miRNA, ylab = metabolite)
 
-      ggsave(paste("C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Correlation_plots\\",
+      ggsave(paste(".\\Correlation_plots\\",
                    variable_1[length(variable_1)], "-", 
                    gsub(":", "-", variable_2[length(variable_2)]),
                    ".pdf", sep=""), device = "pdf")
@@ -99,7 +99,7 @@ for (miRNA in rownames(miRNA_data)){
 # correlations
 final_df <- data.frame(variable_1, variable_2, pvalue, r)
 
-write.table(final_df, "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Correlaciones_miRNAs-metabolitos.txt",
+write.table(final_df, ".\\Correlaciones_miRNAs-metabolitos.txt",
             sep = "\t", row.names = FALSE, quote = FALSE)
 
 # short-format correlation information (r)
@@ -122,22 +122,35 @@ ggcorrplot(transformed_data, method = "circle",
            sig.level = 0.05, insig = "blank")
 
 # small correlation plot
-miRNAs_with_targets <- c("hsa-miR-548j-5p", "hsa-miR-554",
-                         "hsa-miR-876-3p", "hsa-miR-641",
-                         "hsa-miR-877-5p", "hsa-miR-509-3p",
-                         "hsa-miR-665", "hsa-miR-32-3p",
-                         "hsa-miR-31-5p", "hsa-miR-671-5p",
-                         "hsa-miR-33b-5p","hsa-let-7c-5p",
-                         "hsa-miR-10b-5p", "hsa-miR-139-3p",
-                         "hsa-miR-627-5p", "hsa-miR-30d-5p", 
-                         "hsa-miR-185-5p", "hsa-miR-326")
 
-important_metabolites <- c("Arachidonic Acid", "L-Arginine", "L-Leucine", 
-                           "Sphingosine Phosphate", "LPC 20:4", "LPC 20:5",
-                           "LPC 22:6")
+important_metabolites <- rev(c("Sphingosine Phosphate", "Arachidonic Acid", 
+                           "LPC 20:4", "LPC 20:5","LPC 22:6", "L-Arginine",
+                           "L-Leucine"))
 
-transformed_data <- as.matrix(transformed_data)[miRNAs_with_targets, important_metabolites]
-transformed_data_pvalues <- as.matrix(transformed_data_pvalues)[miRNAs_with_targets, important_metabolites]
+transformed_data <- as.matrix(transformed_data)[, important_metabolites]
+transformed_data_pvalues <- as.matrix(transformed_data_pvalues)[, important_metabolites]
+
+# remove miRNAs with no correlations 
+
+miRNAs_no_corr <- c("hsa-let-7f-1-3p", "hsa-miR-139-3p", "hsa-miR-145-5p", 
+                    "hsa-miR-18a-5p", "hsa-miR-31-5p", "hsa-miR-323a-3p",
+                    "hsa-miR-326", "hsa-miR-33b-5p", "hsa-miR-451a", 
+                    "hsa-miR-505-3p", "hsa-miR-521", "hsa-miR-590-3p", 
+                    "hsa-miR-631", "hsa-miR-641")
+
+miRNAs_no_corr_indexes <- c(2,10,11,15,19,21,22,23,24,25,27,30,33,34)
+
+
+transformed_data <- transformed_data[-miRNAs_no_corr_indexes,]
+transformed_data_pvalues <- transformed_data_pvalues[-miRNAs_no_corr_indexes,]
+
+write.table(transformed_data,
+            file = ".\\cor_coefs.txt", 
+            sep = ",", quote = FALSE, col.names = TRUE, row.names = TRUE)
+
+write.table(transformed_data_pvalues,
+            file = ".\\cor_pvalues.txt", 
+            sep = ",", quote = FALSE, col.names = TRUE, row.names = TRUE)
 
 ggcorrplot(transformed_data, method = "circle", 
            p.mat = as.matrix(transformed_data_pvalues), 

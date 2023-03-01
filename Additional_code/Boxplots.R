@@ -1,7 +1,7 @@
 library("ggplot2")
 library("gridExtra")
 library("ggpubr")
-
+library(readxl)
 
 ### FUNCTIONS
 
@@ -30,15 +30,10 @@ data_collection <- function(file_name){
   patients <- patients[-to_remove]
   
   # miRNAs chosen for boxplot representation
-  important_miRNAs <- c("hsa-miR-548j-5p", "hsa-miR-554",
-                        "hsa-miR-876-3p", "hsa-miR-641",
-                        "hsa-miR-877-5p", "hsa-miR-509-3p",
-                        "hsa-miR-665", "hsa-miR-32-3p",
-                        "hsa-miR-31-5p", "hsa-miR-671-5p",
-                        "hsa-miR-33b-5p","hsa-let-7c-5p",
-                        "hsa-miR-10b-5p", "hsa-miR-139-3p",
-                        "hsa-miR-627-5p", "hsa-miR-30d-5p", 
-                        "hsa-miR-185-5p", "hsa-miR-326")
+  
+  #data
+  DE_miRNAs <- read_excel(".\\miRNAs\\Resultados_miRNAs\\miRNAs_validation.xlsx")
+  important_miRNAs <- unlist(DE_miRNAs[which(abs(DE_miRNAs[,3]) >= 1.5), 1])
   
   # only "important_miRNAs" are used
   to_keep <- c()
@@ -63,7 +58,7 @@ data_collection <- function(file_name){
 
 ### CODE
 
-path <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Resultados_miRNAs\\8_RESULTS_GME.txt"
+path <- ".\\Resultados_miRNAs\\8_RESULTS_GME.txt"
 
 if (file.exists(path) == FALSE){
   stop("Introduced data file does not exist.")
@@ -71,7 +66,7 @@ if (file.exists(path) == FALSE){
 
 data <- data_collection(path)
 
-par(mfrow = c(3,6))
+par(mfrow = c(4,4))
 
 for (i in unique(data$miRNAs)){
 

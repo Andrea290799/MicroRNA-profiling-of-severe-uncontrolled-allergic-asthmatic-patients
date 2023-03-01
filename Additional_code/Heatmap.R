@@ -9,8 +9,8 @@ library(dendextend)
 library(ComplexHeatmap)
 
 # paths of data to use
-path <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Resultados_miRNAs\\8_RESULTS_GME.txt"
-path_significative <- "C:\\Users\\andre\\OneDrive - Fundación Universitaria San Pablo CEU\\miRNAs\\Resultados_miRNAs\\miRNAs_validation.xlsx"
+path <- ".\\Resultados_miRNAs\\8_RESULTS_GME.txt"
+path_significative <- ".\\Resultados_miRNAs\\miRNAs_validation.xlsx"
 
 data <- read.table(path, header = TRUE)
 data_validation <- read_excel(path_significative)
