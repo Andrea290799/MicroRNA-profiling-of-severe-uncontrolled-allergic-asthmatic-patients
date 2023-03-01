@@ -32,7 +32,7 @@ Well	PlateID	Sample	Detector	Task	Ct	delta Rn	delta Ct	Ct Avg	Ct SD	Avg Delta Ct
 
 2. In this file there are Summary lines that need to be deleted before starting the analysis. 
 3. Change blank spaces in detector names by "_". 
-4. In the first script to be used, `miRNAs_normalization.R`, change lines 54-65 to define specify your 3 groups. In this case, samples starting with G1 belong to ICS group; samples starting with G5 to C (control) group; the rest, to Uc group. 
+4. In the first script to be used, `miRNAs_normalization.R`, change lines 54-65 to define your 3 groups. In this case, samples starting with G1 belong to ICS group; samples starting with G5 to C (control) group; the rest, to Uc group. 
 5. Before starting the analysis, you must have the folders to analyze and the scripts in one folder. Each folder to analyze must contain the amplification data (step one) in one or more txt files. Each folder is for one one panel (one folder to panel I and other folder for panel II).
 6. To execute the script, you only need to execute the functions in the given code and, after that, execute this line:
 
