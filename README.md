@@ -89,7 +89,7 @@ This script is used to perform RT-qPCR expression values normalization and devel
 Once you obtain the results from the former step, you don't need to do anything; the only input for this script is the file obtained in the last step. Just execute the code. To execute the script, you only need to execute the functions in the given code and, after that, execute this line:
 
 ~~~
-main("your_file", "method")
+main("<your_file>", "method")
 ~~~
 
 The fisrt argument is the file you want to analyze, the second argument is the method that will be used in the statistical analysis. Currently, there is only one method available (classic).
