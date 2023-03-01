@@ -45,7 +45,7 @@ The fisrt argument is the folder you want to analyze, the second argument is the
 
 ### Results
 
-The executed script will generate a new folder called as the name of the used method (GME). Inside, there are folders (belonging to each used panel) with process control files (1-6). There is also a common to all panels control files (7) and the results file (8). This results file look like this: 
+The executed script will generate a new folder called as The used method (GME). Inside, there are folders (belonging to each used panel) with process control files (1-6). There is also a common to all panels control file (7) and the results file (8). This results file look like this: 
 
 ~~~
 Plate_ID	miRNA	2^-AACt	ARn	Group
