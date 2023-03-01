@@ -3,7 +3,7 @@ Repository containing all code used for the development of this work.
 
 AÑADIR ABSTRACT DEFINITIVO
 
-The tow main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been mainly developed taking into account the characteristics of this project:
+The two main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been mainly developed taking into account the characteristics of this project:
 
 - Serum miRNA profiling by RT-qPCR using 7900HT Fast Real-Time PCR System with 384-Well Block Module (Thermo-Fisher) and miRCURY LNA miARN miRNome PCR Panels (Human panel I +II). 
 - Used plates must have 3 UniSP3 IPC detectors, used for normalization. 
