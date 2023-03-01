@@ -30,7 +30,7 @@ Well	PlateID	Sample	Detector	Task	Ct	delta Rn	delta Ct	Ct Avg	Ct SD	Avg Delta Ct
 5		C21	hsa-miR-374b-3p	Target	Undetermined	0.009943667		40.0				40.0						Automatic			Manual	0.14125375	279003019			
 ~~~
 
-2. In this file there are Summary lines that are necesary to delete before starting the analysis. 
+2. In this file there are Summary lines that need to be deleted before starting the analysis. 
 3. Change blank spaces in detector names by "_". 
 4. In the first script to be used, `miRNAs_normalization.R`, change lines 54-65 to define specify your 3 groups. In this case, samples starting with G1 belong to ICS group; samples starting with G5 to C (control) group; the rest, to Uc group. 
 5. Before starting the analysis, you must have the folders to analyze and the scripts in one folder. Each folder to analyze must contain the amplification data (step one) in one or more txt files. Each folder is for one one panel (one folder to panel I and other folder for panel II).
