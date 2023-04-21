@@ -13,6 +13,7 @@ We found 40 differentially expressed miRNAs between severe uncontrolled and mild
 Severe uncontrolled allergic asthmatic patients have a particular miRNA fingerprint mainly related to inflammation, sphingolipid and lipid metabolism that correlates with severe asthma metabolic alterations, revealing new mechanisms of allergic asthma disease and their potential as severity biomarkers. 
 
 
+
 The two main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been mainly developed taking into account the characteristics of this project:
 
 - Serum miRNA profiling by RT-qPCR using 7900HT Fast Real-Time PCR System with 384-Well Block Module (Thermo-Fisher) and miRCURY LNA miARN miRNome PCR Panels (Human panel I +II). 
