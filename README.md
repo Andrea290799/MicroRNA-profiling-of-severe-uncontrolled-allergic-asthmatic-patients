@@ -1,15 +1,15 @@
-# Validation of specific microRNAs as biomarkers in allergic asthma severity
+# Specific miRNA profile associated to allergic asthma severity
 Repository containing all code used for the development of this work. 
 
 ## Abstract
-### Objectives: 
-Severe uncontrolled allergic asthmatic prevalence is increasing, while the phenotype’s underlying causes and mechanisms are not fully understood. Determining patients’ allergic asthma phenotype is critical for development of personalized medicine strategies. We aimed to determine miRNAs as novel severity-associated biomarkers to improve the available tools for patients’ stratification.
+### Background: 
+Stratification of severe allergic asthmatic patients is a challenging task. Severe uncontrolled allergic asthma prevalence is increasing, while the underlying causes and mechanisms are not fully understood. Here, we aimed to identify novel biomarkers and the biological mechanisms in which they are involved for allergic asthmatic patients’ stratification according to their severity.
 ### Methods: 
-MiRNA PCR panels were used to study the expression of 752 miRNAs extracted from serum samples from 36 individuals. Normalization and statistical methods were applied with in-house developed R scripts. miEAA (miRNA Enrichment and Annotation) software was applied for functional enrichment analysis. Differentially expressed miRNAs’ predicted targets were obtained by using miRDB database. Validation of the identified biomarkers was performed in the CAMP cohort of allergic asthmatic patients from Brigham and Women's Hospital and Harvard Medical School.
+MiRNA PCR panels were used to study the expression of 752 miRNAs extracted from serum samples from 36 individuals. Normalization and statistical methods were applied with in-house developed R scripts. miEAA (miRNA Enrichment and Annotation) software was applied for functional enrichment analysis. Differentially expressed miRNAs’ predicted targets were obtained by using miRDB database. Validation of the identified biomarkers was performed in a subset of allergic asthmatic patients from the CAMP cohort from Brigham and Women's Hospital and Harvard Medical School.
 ### Results: 
-We found 40 differentially expressed miRNAs between the severe uncontrolled and the mild allergic asthmatic groups. Functional enrichment analysis revealed signatures related mainly to inflammation (Toll-like receptor) and metabolism (sphingolipid signalling pathway). Significant correlations between 24 differentially expressed miRNAs and asthma-inflammation-related metabolites were observed. Based on this, we found differentially expressed miRNAs had predicted targets related to the correlated metabolites. Validation analysis provide 4 miRNAs as severity progression biomarkers.  
+We found 40 differentially expressed miRNAs between the severe uncontrolled and the mild allergic asthmatic patients. Functional enrichment analysis revealed signatures related mainly to inflammation and metabolism. Significant correlations between 24 differentially expressed miRNAs and serum levels of asthma-inflammation-related metabolites were observed. Finally, the validation analysis provided 4 miRNAs as severity progression biomarkers.   
 ### Conclusions: 
-Our results identified novel mechanisms associated to severe phenotypes and provide a set of 4 miRNAs as validated biomarkers for severity in allergic asthma patients.
+Our results present a set of 4 miRNAs useful for allergic asthmatic patients’ stratification according to their severity. Moreover, we decipher the mechanisms underlying severe uncontrolled phenotype and provide novel insight into the biological pathways, mainly related to metabolism and inflammation, involved in this phenotype.
 
 
 
