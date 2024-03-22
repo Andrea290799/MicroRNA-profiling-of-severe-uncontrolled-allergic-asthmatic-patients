@@ -16,8 +16,8 @@ Our results present a set of 4 miRNAs useful for allergic asthmatic patients’ 
 
 The two main codes, `miRNAs_normalization.R` and `miRNAs_diff_exp.R`, have been mainly developed taking into account the characteristics of this project:
 
-- Serum miRNA profiling by RT-qPCR using 7900HT Fast Real-Time PCR System with 384-Well Block Module (Thermo-Fisher) and miRCURY LNA miARN miRNome PCR Panels (Human panel I +II). 
-- Used plates must have 3 UniSP3 IPC detectors, used for normalization. 
+- Serum miRNA profiling by RT-qPCR using 7900HT Fast Real-Time PCR System with 384-Well Block Module (Thermo-Fisher) and miRCURY LNA miARN miRNome PCR Panels (Human panel I +II) were used for miRNA expression quantification. 
+- Used plates have 3 UniSP3 IPC detectors, used for inter-plate normalization. 
 - Three groups of subjects have been considered. 
 
 You need to take into account the neccessary changes in paths, file names and variables for the script to properly work. If you needed, you can contact me: andrea.escolar99@gmail.com
@@ -43,7 +43,7 @@ Well	PlateID	Sample	Detector	Task	Ct	delta Rn	delta Ct	Ct Avg	Ct SD	Avg Delta Ct
 
 2. In this file there are Summary lines that need to be deleted before starting the analysis. 
 3. Change blank spaces in detector names by "_". 
-4. In the first script to be used, `miRNAs_normalization.R`, change lines 54-65 to define your 3 groups. In this case, samples starting with G1 belong to ICS group; samples starting with G5 to C (control) group; the rest, to UC group. 
+4. In the first script to be used, `miRNAs_normalization.R`, change lines 54-65 to define your 3 groups. In this case, samples starting with G1 belong to ICS (mild) group; samples starting with G5 to C (control) group; the rest, to UC (severe uncontrolled) group. 
 5. Before starting the analysis, you must have the folders to analyze and the scripts in one folder. Each folder to analyze must contain the amplification data (step one) in one or more txt files. Each folder is for one panel (one folder to panel I and other folder for panel II).
 6. To execute the script, you only need to execute the functions in the given code and, after that, execute this line:
 
