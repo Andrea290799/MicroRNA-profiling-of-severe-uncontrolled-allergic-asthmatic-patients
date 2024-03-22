@@ -79,19 +79,19 @@ This script is used to perform RT-qPCR expression values normalization and devel
 
 ![image](https://user-images.githubusercontent.com/67425702/206719120-02a46280-d95b-46b2-9951-87467cc38e1a.png)
 
-- blank_NA_delete: Function that deletes those miRNAs whose cts are NA or whose miRNA names are Blank.
-- interplate_normalization: Function that do interplate normalization on the data.
-- GME: Function that applies GME normalization method.
+- blank_NA_delete: function that deletes those miRNAs whose cts are NA or whose miRNA names are Blank.
+- interplate_normalization: function that do interplate normalization on the data.
+- GME: function that applies GME (Global Mean Normalization) normalization method.
 
 ![image](https://user-images.githubusercontent.com/67425702/207880665-9d023688-42c8-42ee-b2dc-510371bf14a5.png)
 
-- ΔΔCt: Function that does ΔΔCt normalization.
+- ΔΔCt: function that does ΔΔCt normalization (ΔCt values are got).
 
 ![image](https://user-images.githubusercontent.com/67425702/207880923-f0ac69ae-df6d-4597-a6c0-4ddf3dc545df.png)
 
 
-- DOS_ΔΔct: Function that calculates 2^-ΔΔCt.
-- main: Function that executes the main code. 
+- DOS_ΔΔct: function that calculates 2^-ΔΔCt.
+- main: function that executes the main code. 
 
 
 ## _miRNAs_diff_exp.R_
