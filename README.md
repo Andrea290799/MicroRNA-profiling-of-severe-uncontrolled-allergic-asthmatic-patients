@@ -124,5 +124,5 @@ The columns represent the miRNA name and the pvalue and log2(Fold Change) of eve
 
 This script is used to perform differential expression analysis between groups of subjects (control, mild and severe uncontrolled):
 - data_collection: gets the data from all the input files and turn some of its columns into manageable lists.
-- statistical_tests_pvalues: Function that does different statistical tests. 
-- main: Function that executes the main code. It also calculates the Fold Changes of each miRNA in each subjects' comparative. 
+- statistical_tests_pvalues: function that does different statistical tests. 
+- main: function that executes the main code. It also calculates the Fold Changes of each miRNA in each subjects' comparative. 
