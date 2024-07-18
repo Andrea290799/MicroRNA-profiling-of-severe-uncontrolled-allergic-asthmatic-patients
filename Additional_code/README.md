@@ -7,12 +7,6 @@ This script was used to perform a hierarchical clustering (distance: Manhatan, m
 
 ![image](https://user-images.githubusercontent.com/67425702/222125146-7829901e-bcd5-48cc-b6b4-a1a5c0787584.png)
 
-## _Boxplots.R_
-
-This script prepares a 3X3 boxplot figure of the expression values of all those 9 top miRNAs ranked by abs(log2(FC)), comparing mild and severe uncontrolled groups. 
-
-![image](https://github.com/Andrea290799/MicroRNA-profiling-of-severe-uncontrolled-allergic-asthmatic-patients/assets/67425702/a4006a5d-9d2d-4154-8777-e69c73a88139)
-
 
 ## _clusterProfiler_enrichment-analysis.R_
 
