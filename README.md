@@ -72,11 +72,11 @@ This script is used to perform RT-qPCR expression values normalization and devel
 
 - blank_NA_delete: function that deletes those miRNAs whose cts are NA or whose miRNA names are Blank.
 - interplate_normalization: function that do interplate normalization on the data.
-- GME: function that applies GME (Global Mean Normalization) normalization method.
+- GME: function that applies GME (Global Mean Normalization) for ΔCt normalization method.
 
 ![image](https://user-images.githubusercontent.com/67425702/207880665-9d023688-42c8-42ee-b2dc-510371bf14a5.png)
 
-- ΔΔCt: function that does ΔΔCt normalization (ΔCt values are got).
+- ΔΔCt: function that does ΔΔCt normalization.
 
 ![image](https://user-images.githubusercontent.com/67425702/207880923-f0ac69ae-df6d-4597-a6c0-4ddf3dc545df.png)
 
