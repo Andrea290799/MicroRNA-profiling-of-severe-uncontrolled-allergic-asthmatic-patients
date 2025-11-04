@@ -1,6 +1,6 @@
 # Additional code
 
-In this folder there are some scripts used for dowmstream analyses and graphical representation. 
+In this folder there are some scripts used for downstream analyses and graphical representation. 
 
 ## _Heatmap.R_
 This script was used to perform a hierarchical clustering (distance: Manhatan, method: complete), by depicting a heatmap. Used data were expression values of the 40 differentially expressed miRNAs in each group of patients (normalized by Z-score). 
