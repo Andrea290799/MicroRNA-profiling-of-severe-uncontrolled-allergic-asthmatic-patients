@@ -1,5 +1,5 @@
 # Specific miRNA profile associated to allergic asthma severity
-doi: 10.3390/ijms25179425
+doi: [10.3390/ijms25179425](https://www.mdpi.com/1422-0067/25/17/9425)
 
 ## Abstract
 
